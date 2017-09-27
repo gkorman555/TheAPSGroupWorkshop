@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.alfresco.consulting</groupId>
+  <artifactId>aps-work-management</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>aps-work-management</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+		<groupId>com.activiti</groupId>
+		<artifactId>activiti-app-root</artifactId>
+		<type>pom</type>
+		<version>1.6.3</version>
+	</dependency>
+	<dependency>
+  		<groupId>com.activiti</groupId>
+  		<artifactId>activiti-app-logic</artifactId>
+  		<version>1.6.3</version>
+	</dependency>
+  </dependencies>
+  
+  <build>
+    <testResources>
+        <testResource>
+            <directory>src/test/process</directory>
+        </testResource>
+        <testResource>
+            <directory>src/test/resources</directory>
+        </testResource>
+    </testResources>
+  </build>
+</project>
