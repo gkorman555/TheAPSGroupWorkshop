@@ -1,0 +1,59 @@
+{
+	"variables": [],
+	"info": {
+		"name": "APS Message Event Received",
+		"_postman_id": "8810e9e0-251f-85aa-4c92-c5f37b9c43e3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Trigger APS Message",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/activiti-app/api/runtime/executions/207697?tenantId=tenant_1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"activiti-app",
+						"api",
+						"runtime",
+						"executions",
+						"207697"
+					],
+					"query": [
+						{
+							"key": "tenantId",
+							"value": "tenant_1",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQ=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"action\":\"messageEventReceived\",\n\t\"messageName\":\"ContentHasArrived\",\n\t\"variables\": [  \n  \t\t{\n    \t\t\"name\": \"sampleReturnValue\",\n    \t\t\"value\": \"someValueGJK\"\n    \t}\n  \t\n  \t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
